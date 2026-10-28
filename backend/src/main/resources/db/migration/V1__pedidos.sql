@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXIST pedidos(
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    fecha_entrega TIMESTAMP,
+    estado VARCHAR(50),
+    cliente_id INTEGER NOT NULL,
+    CONSTRAINT fk_pedido_cliente FOREIGN KEY (cliente_id) REFERENCES cliente(id)
+    )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

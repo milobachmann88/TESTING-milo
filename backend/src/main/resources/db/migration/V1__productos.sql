@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS productos (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(120) NOT NULL,
+    descripcion VARCHAR(300) NOT NULL,
+    categoria VARCHAR(100) NOT NULL,
+    precio DECIMAL(10,2) NOT NULL,
+    stock INT NOT NULL,
+    activo BOOLEAN NOT NULL,
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
